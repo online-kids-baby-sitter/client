@@ -15,7 +15,7 @@ export default {
     merit3: "Users' daddy-mommy interaction is also possible",
     merit4: "You can actually help the life of the Rwandan moms",
     meritDescription1: "Babysitters are single mothers living in Rwanda.",
-    meritDescription2: "I usually work at the local Japanese restaurant KISEKI.",
+    meritDescription2: "They usually work at the local Japanese restaurant KISEKI.",
     helpMother1: "The average monthly salary in Rwanda is about 3,000yen / month.",
     helpMother2: `You can save the lives of Rwandan moms, as the saying goes, just one person use this babysitter and it means one Rwandan mom can get a "normal" paycheck.`,
     helpMother3: "Ten people using us means ten moms can maintain the same level of living as they did before Corona.",
