@@ -11,7 +11,7 @@ export default {
     aboutUsDescription3: "We provide a new opportunity to meet foreigners and practice communication with them while at the same time being STAYHOME.",
     merit: "Benefits of Participation",
     merit1: "A new opportunity to get in touch with foreigners",
-    merit2: "I can practice English",
+    merit2: "You can practice English",
     merit3: "Users' daddy-mommy interaction is also possible",
     merit4: "You can actually help the life of the Rwandan moms",
     meritDescription1: "Babysitters are single mothers living in Rwanda.",
