@@ -15,7 +15,7 @@ const messages = {
 
 const initialState = {
   intl: {
-    locale: "ja",
+    locale: window.navigator.language,
     messages: flatten(ja)
   }
 };

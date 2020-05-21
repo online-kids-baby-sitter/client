@@ -4,11 +4,15 @@ import styled from "styled-components";
 import {Link} from "react-router-dom";
 import {FormattedMessage} from "react-intl";
 import mediaQuery from "styled-media-query";
-import {Icon, Image, Menu, Segment, Sidebar} from 'semantic-ui-react'
+import {Icon, Image, Menu, Segment, Sidebar} from 'semantic-ui-react';
+import {useMediaQuery} from "react-responsive";
+import {changeLanguage} from "../../stores";
+
 
 const Header = ({children}) => {
   const [visible, setVisible] = useState(false);
-  return <Sidebar.Pushable style={{height: "100%"}}>
+  const isMobile = useMediaQuery({query: '(max-device-width: 768px)'});
+  return <Sidebar.Pushable>
     <Sidebar
       as={Menu}
       animation='overlay'
@@ -18,19 +22,37 @@ const Header = ({children}) => {
       visible={visible}
       width='thin'
     >
-      <div style={{height: "100vh"}}>
-        <Menu.Item as={Link} to="/">
-          <Icon name='home'/>
-          Home
-        </Menu.Item>
-        <Menu.Item as={Link} to="/qa">
-          <Icon name='question circle'/>
-          Q&A
-        </Menu.Item>
-        <Menu.Item as="a" href="https://forms.gle/JaSEyM7JUm7jL6Lw5">
-          <Icon name="edit"/>
-          <FormattedMessage id="header.applicationForm"/>
-        </Menu.Item>
+      <div style={{
+        height: isMobile ? "90vh" : "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}>
+        <div>
+          <Menu.Item as={Link} to="/">
+            <Icon name='home'/>
+            Home
+          </Menu.Item>
+          <Menu.Item as={Link} to="/qa">
+            <Icon name='question circle'/>
+            Q&A
+          </Menu.Item>
+          <Menu.Item as="a" href="https://forms.gle/JaSEyM7JUm7jL6Lw5">
+            <Icon name="edit"/>
+            <FormattedMessage id="header.applicationForm"/>
+          </Menu.Item>
+        </div>
+        <div>
+          <Menu.Item as="div">
+            <Icon name="globe"/>
+          </Menu.Item>
+          <Menu.Item as="a" onClick={() => changeLanguage("en")}>
+            English
+          </Menu.Item>
+          <Menu.Item as="a" onClick={() => changeLanguage("ja")}>
+            日本語
+          </Menu.Item>
+        </div>
       </div>
     </Sidebar>
 
@@ -39,14 +61,8 @@ const Header = ({children}) => {
         <Banner>
           <div className="ui container">
             <TableContainer>
-              <Icon name="sidebar" style={{fontSize: "2rem", margin: "3vh 0 0 0"}}
+              <Icon name="sidebar" style={{fontSize: "2rem", margin: "4vh 0 0 0", color: "#897657"}}
                     onClick={() => setVisible(!visible)}/>
-              <Items>
-                <Link to="/qa"><Black><FormattedMessage id="header.q&a"/></Black></Link>
-                <a href="https://forms.gle/JaSEyM7JUm7jL6Lw5"><Black><FormattedMessage
-                  id="header.applicationForm"/></Black></a>
-                <div style={{marginTop: "-0.15vw"}}><LanguageSelector/></div>
-              </Items>
             </TableContainer>
           </div>
         </Banner>
@@ -55,8 +71,6 @@ const Header = ({children}) => {
     </Sidebar.Pusher>
   </Sidebar.Pushable>
 };
-
-const mediaMobile = mediaQuery.lessThan("medium");
 
 
 const Banner = styled.div`
@@ -71,18 +85,12 @@ const TableContainer = styled.div`
   display:flex;
   align-items: center;
   justify-content: space-between;
-  ${mediaMobile`
-    min-height: 10vh;
-    display: block;
-    font-size:0.9rem;
-  `}
   margin-bottom:1rem;
 `;
 const Title = styled.div`
   display: block;
   width: 100vw;
-  ${mediaMobile`width: 100vw;`}
-  margin-left: -2vw;
+  margin-left: -2vw; 
 `;
 const Black = styled.div`
   color: black;
@@ -94,6 +102,5 @@ const Items = styled.div`
   display: flex;
   text-align: right;
   color: black;
-  ${mediaMobile`justify-content:center;`}
 `;
 export default Header;

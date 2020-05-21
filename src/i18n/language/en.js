@@ -31,20 +31,20 @@ export default {
     contents: "Contents",
     contentsDescription1: "Content is changed by day of the week.",
     contentsDescription2: "Come join with your family and have fun!",
-    EVERYTHING: "Everyday",
+    everyday: "《Everyday》",
     everydayContents: "The song of beginning / the song of end",
-    daily: "Daily",
+    daily: "《Daily》",
     monday: "Monday: dancing, singing",
     tuesday: "Tuesday: drawing",
     wednesday: "Wednesday: origami, crafts",
     thursday: "Thursday: cooking",
     friday: "Friday: English, Japanese and Rwandan language lessons",
-    everyMonth: "EveryMonth",
+    everyMonth: "《EveryMonth》",
     gathering: "Get-together party",
-    bimonthly: "Every other month",
+    bimonthly: "《Every other month》",
     sendLetter: "Let's exchange letters with Rwanda!",
     many2many: "*It's a many-to-many style, where participants can communicate with each other",
-    CustomersVoice: "User's Voice",
+    customersVoice: "User's Voice",
     customerMessage1: `It was so much fun to take a dance lesson!
 After the lesson, We were dancing and talking about it with my daughter and my husband for a while.`,
     customerMessage2: `My child says, "Why are they over there in the daytime?" "I wonder if they all got sunburned in their bellies." I think there was something special to be felt in that space.`,
@@ -53,32 +53,61 @@ After the lesson, We were dancing and talking about it with my daughter and my h
     customerMessage5: `My daughter can hardly speak English, but she asked me, "Mom, let's have a conversation in English now."`,
     customerMessage6: `When the children are grown up.
 I think his view to the world will expand when we realize that the 3,000yen participation fee is a monthly salary for Rwandan mothers. `,
-    mamaList: "ママたち一覧",
-    organizer: "主催者",
-    UCName: "中嶋 雄士",
-    UCDescription1: "TORIAEZU社（エストニア） Founder & CEO",
-    UCDescription2: "Chant-through社（ルワンダ） Founder & CEO",
-    MIOName: "山田 美緒",
-    MIODescription1: "ルワンダの首都キガリにある日本食レストラン・宿KISEKIのオーナー。",
-    MIODescription2: "元気すぎる3人の男の子の母。",
-    MIODescription3: "地域のシングルマザーを雇用している。",
-
+    mamaList: "Moms at a Glance",
+    organizer: "Organizers",
+    UCName: "Yushi Nakashima",
+    UCDescription1: "Founder & CEO, TORIAEZU (Estonia)",
+    UCDescription2: "Founder & CEO, Chant-through (Rwanda)",
+    MIOName: "Mio Yamada",
+    MIODescription1: "The owner of KISEKI, a Japanese restaurant and guesthouse in Kigali, the capital of Rwanda.",
+    MIODescription2: "Mother of three boys.",
+    MIODescription3: "She employs single mothers in the area.",
   },
   mamas:
     {
-      0: {name: "レイチェル", description: "18歳、8人兄弟"},
-      1: {name: "ベティ", description: "8歳と22歳の子供のシングルマザー"},
-      2: {name: "オディーレ", description: "2人のシングルマザー南海キャンディーズのシズちゃん似"},
-      3: {name: "ジゼル", description: "18歳で足の不自由なお母さんを助け家計を支える、英語堪能"},
-      4: {name: "ムチェーシャ", description: "2人の子供のシングルマザー、ダンスが上手"},
-      5: {name: "マリア", description: "新婚さん、シングルマザーではない。スポーツ万能"},
-      6: {name: "カミカゼ", description: "キセキのマネージャー英語堪能"},
-      7: {name: "クリスティン", description: "キセキ住み込み。地方に暮らす娘が1人、シングルマザー"},
-      8: {name: "ジャネッテ", description: "双子の男の子のお母さん"}
+      0: {name: "Rachel", description: "18 years old, eight siblings"},
+      1: {name: "Betty", description: "Single mother of two children, ages 8 and 22"},
+      2: {name: "Odile", description: "Single mother of two, looks like famous Japanese comedian Siz-chan"},
+      3: {
+        name: "Giselle",
+        description: "18 years old, helping her lame mother to support the household, fluent in English"
+      },
+      4: {name: "Mchesha", description: "Single mother of two children, good dancer"},
+      5: {name: "Maria", description: "Newlywed, not a single mother. Sports All-Around"},
+      6: {name: "Kamikazi", description: "Kiseki's manager English proficient"},
+      7: {name: "Christine", description: "Kiseki live-in. A single mother with a daughter living in a rural area,"},
+      8: {name: "Janette", description: "mom of twin boys"}
     },
   qas:
     {
-      0: {title:"参加年齢に制限はありますか？", description: "制限はありません。今のところ2〜13歳のお子さんが参加しておられます。"},
-      1: {title:"予約はいらないの？", description: "はい。時間はトップページのカレンダーに記載しているので、その時間に自由に出入りしてOKです！"}
+      0: {
+        title: "Is there an age limit for participation?",
+        description: "There are no restrictions. So far, we have children aged 2-13 years old participating."
+      },
+      1: {
+        title: "Don't you need an appointment?",
+        description: "You don't need to book for it. The hours are listed in the calendar on the top page, so you are free to come and go at that time!"
+      },
+      2: {
+        title: "Is it okay if I can only understand English?",
+        description: `The moms for this service can speak it too. No worries! `
+      },
+      3: {
+        title: "Is it okay to pay with a credit card?",
+        description: `We are planning to install online payment from July.
+Until then, we ask that you pay by bank transfer. `
+      },
+      4: {
+        title: "Is it 3,000 yen even if I join in the middle of the month?",
+        description: `Change the amount according to the number of days remaining in the month as follows.
+Less than 10 days left in the month: 1000 yen
+Less than 20 days left in the month: 2000 yen
+More than 21 days remaining in the month: 3000 yen
+e.g.) May 15th admission (16 days of the month) → 2000yen`
+      },
+      5: {
+        title: "How many people can I take it with?",
+        description: "Yes. Any number of people will do, as long as they're in the same place!"
+      }
     }
 };

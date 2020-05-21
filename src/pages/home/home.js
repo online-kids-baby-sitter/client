@@ -89,7 +89,7 @@ const Home = () => {
         </div>
         <div className="ui centered grid" style={{margin: "10vh 0 3vh 0"}}>
           <a className="ui primary massive button" href="https://forms.gle/JaSEyM7JUm7jL6Lw5"
-             style={{width: "40vw", backgroundColor: "#897657"}}>申し込み</a>
+             style={{width: "40vw", backgroundColor: "#897657"}}><FormattedMessage id="header.applicationForm"/></a>
         </div>
         <Driver/>
         <h2 className="ui header"><FormattedMessage id="home.schedule"/></h2>
@@ -140,7 +140,7 @@ const Home = () => {
         </div>
         <Driver/>
         <h2 className="ui header"><FormattedMessage id="home.customersVoice"/></h2>
-        <div style={{margin: "0 0 5vh 0"}}>
+        <div style={{margin: "0 0 5vh 0", display:"flex", justifyContent:"center"}}>
           <Slider {...settings} style={{width: !isMobile && "60vw"}}>
             {range(6).map(n => ++n).map(index =>
               (<Voices key={index}>
@@ -171,7 +171,7 @@ const Home = () => {
         </div>
         <div className="ui centered grid" style={{margin: "10vh 0 3vh 0"}}>
           <a className="ui primary massive button" href="https://forms.gle/JaSEyM7JUm7jL6Lw5"
-             style={{width: "40vw", backgroundColor: "#897657"}}>申し込み</a>
+             style={{width: "40vw", backgroundColor: "#897657"}}><FormattedMessage id="header.applicationForm"/></a>
         </div>
         <Driver/>
         <div className="ui stackable grid" style={{margin: "0 0 5vh 0"}}>
