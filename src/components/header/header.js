@@ -81,8 +81,6 @@ const Banner = styled.div`
   background-position: center center;
   width: 100vw;
   height: 20vw;
-  display: flex;
-  align-items:center;
   margin-bottom: 5vh;
 `;
 const TableContainer = styled.div`
@@ -90,21 +88,5 @@ const TableContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom:1rem;
-`;
-const Title = styled.div`
-  display: block;
-  width: 100vw;
-  margin-left: -2vw; 
-`;
-const Black = styled.div`
-  color: black;
-  margin-right: 4vw;
-`;
-
-const Items = styled.div`
-  margin-top: 3vh;
-  display: flex;
-  text-align: right;
-  color: black;
 `;
 export default Header;
