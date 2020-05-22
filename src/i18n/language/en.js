@@ -1,7 +1,7 @@
 export default {
   header: {
     "q&a": "Q&A",
-    applicationForm: "Application from",
+    applicationForm: "Application form",
   },
   home: {
     fly: "Fly high around the world, Kids & Babies!",
