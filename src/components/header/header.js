@@ -81,6 +81,8 @@ const Banner = styled.div`
   background-position: center center;
   width: 100vw;
   height: 20vw;
+  display: flex;
+  align-items:center;
   margin-bottom: 5vh;
 `;
 const TableContainer = styled.div`

@@ -3,6 +3,10 @@ export default {
     "q&a": "Q&A",
     applicationForm: "Application form",
   },
+  footer: {
+    term: "term",
+    privacy: "privacy policy"
+  },
   home: {
     fly: "Fly high around the world, Kids & Babies!",
     aboutUs: "What is Online Kids・Babysitting?",

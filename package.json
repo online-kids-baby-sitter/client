@@ -14,7 +14,7 @@
     "react-dom": "^16.13.1",
     "react-ga": "^2.7.0",
     "react-iframe": "^1.8.0",
-    "react-intl": "^4.3.1",
+    "react-intl": "^4.5.8",
     "react-intl-redux": "^2.2.0",
     "react-redux": "^7.2.0",
     "react-responsive": "^8.0.3",
