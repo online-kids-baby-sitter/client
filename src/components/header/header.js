@@ -12,7 +12,7 @@ import {changeLanguage} from "../../stores";
 const Header = ({children}) => {
   const [visible, setVisible] = useState(false);
   const isMobile = useMediaQuery({query: '(max-device-width: 768px)'});
-  return <Sidebar.Pushable>
+  return <Sidebar.Pushable style={{transaction: "none", transform: "none"}}>
     <Sidebar
       as={Menu}
       animation='overlay'
@@ -21,12 +21,14 @@ const Header = ({children}) => {
       vertical
       visible={visible}
       width='thin'
+      style={{position:"fixed"}}
     >
       <div style={{
         height: isMobile ? "90vh" : "100vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
+        position:"fixed"
       }}>
         <div>
           <Menu.Item as={Link} to="/">
@@ -58,7 +60,7 @@ const Header = ({children}) => {
 
     <Sidebar.Pusher>
       <div onClick={() => visible && setVisible(false)}>
-        <Banner>
+        <Banner style={{position: isMobile && "fixed", zIndex: isMobile && "99"}}>
           <div className="ui container">
             <TableContainer>
               <Icon name="sidebar" style={{fontSize: "2rem", margin: "4vh 0 0 0", color: "#897657"}}
