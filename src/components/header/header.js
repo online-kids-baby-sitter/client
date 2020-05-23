@@ -1,9 +1,7 @@
 import React, {useState} from "react";
-import LanguageSelector from "./languageSelector";
 import styled from "styled-components";
 import {Link} from "react-router-dom";
 import {FormattedMessage} from "react-intl";
-import mediaQuery from "styled-media-query";
 import {Icon, Image, Menu, Segment, Sidebar} from 'semantic-ui-react';
 import {useMediaQuery} from "react-responsive";
 import {changeLanguage} from "../../stores";
@@ -21,14 +19,16 @@ const Header = ({children}) => {
       vertical
       visible={visible}
       width='thin'
-      style={{position:"fixed"}}
+      style={{position:"fixed",width:"100px"}}
     >
       <div style={{
         height: isMobile ? "90vh" : "100vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        position:"fixed"
+        alignItems: "center",
+        position:"fixed",
+        width: "100%"
       }}>
         <div>
           <Menu.Item as={Link} to="/">
