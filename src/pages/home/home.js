@@ -88,7 +88,7 @@ const Home = () => {
             </div>
           </div>
           <div className="ui centered grid" style={{margin: "10vh 0 3vh 0"}}>
-            <a className="ui primary massive button" href="https://forms.gle/JaSEyM7JUm7jL6Lw5"
+            <a className="ui primary massive button" href="https://community.camp-fire.jp/projects/view/296398"
                style={{width: "40vw", backgroundColor: "#897657"}}><FormattedMessage id="header.applicationForm"/></a>
           </div>
           <Driver/>
@@ -170,7 +170,7 @@ const Home = () => {
             </div>
           </div>
           <div className="ui centered grid" style={{margin: "10vh 0 3vh 0"}}>
-            <a className="ui primary massive button" href="https://forms.gle/JaSEyM7JUm7jL6Lw5"
+            <a className="ui primary massive button" href="https://community.camp-fire.jp/projects/view/296398"
                style={{width: "40vw", backgroundColor: "#897657"}}><FormattedMessage id="header.applicationForm"/></a>
           </div>
           <Driver/>
