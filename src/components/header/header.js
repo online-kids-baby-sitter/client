@@ -39,7 +39,7 @@ const Header = ({children}) => {
             <Icon name='question circle'/>
             Q&A
           </Menu.Item>
-          <Menu.Item as="a" href="https://forms.gle/JaSEyM7JUm7jL6Lw5">
+          <Menu.Item as="a" href="https://community.camp-fire.jp/projects/view/296398">
             <Icon name="edit"/>
             <FormattedMessage id="header.applicationForm"/>
           </Menu.Item>
