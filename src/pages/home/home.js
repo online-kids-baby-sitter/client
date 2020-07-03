@@ -131,7 +131,7 @@ const Home = () => {
               <FormattedMessage id="home.everyMonth"/><br/>
               <FormattedMessage id="home.gathering"/><br/>
               <br/>
-              <FormattedMessage id="home.bimonthly"/>
+              <FormattedMessage id="home.bimonthly"/><br/>
               <FormattedMessage id="home.sendLetter"/>
               <br/>
               <br/>
